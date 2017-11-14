@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		092C2AAF1FBA902A0058427E /* ボタン用イラスト in Resources */ = {isa = PBXBuildFile; fileRef = 092C2AAE1FBA902A0058427E /* ボタン用イラスト */; };
 		097F5BCE1FB977C900E57B5B /* DesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097F5BCD1FB977C900E57B5B /* DesViewController.swift */; };
 		097F5BCF1FB980FF00E57B5B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CC7E81FA97E0E00F908E6 /* SecondViewController.swift */; };
 		098F2CE91FA167D100B54600 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098F2CE81FA167D100B54600 /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		092C2AAE1FBA902A0058427E /* ボタン用イラスト */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "ボタン用イラスト"; sourceTree = "<group>"; };
 		097F5BCD1FB977C900E57B5B /* DesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesViewController.swift; sourceTree = "<group>"; };
 		098F2CE51FA167D100B54600 /* sansyoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sansyoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		098F2CE81FA167D100B54600 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				097F5BCD1FB977C900E57B5B /* DesViewController.swift */,
 				098F2CEF1FA167D100B54600 /* Assets.xcassets */,
 				098F2CF11FA167D100B54600 /* LaunchScreen.storyboard */,
+				092C2AAE1FBA902A0058427E /* ボタン用イラスト */,
 				098F2CF41FA167D100B54600 /* Info.plist */,
 			);
 			path = sansyoku;
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				098F2CF31FA167D100B54600 /* LaunchScreen.storyboard in Resources */,
+				092C2AAF1FBA902A0058427E /* ボタン用イラスト in Resources */,
 				098F2CF01FA167D100B54600 /* Assets.xcassets in Resources */,
 				098F2CEE1FA167D100B54600 /* Main.storyboard in Resources */,
 			);

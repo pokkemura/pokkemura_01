@@ -127,12 +127,34 @@
                     <view key="view" contentMode="scaleToFill" id="yig-bt-y6d">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jly-h5-10w">
+                                <rect key="frame" x="0.0" y="16" width="164" height="166"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="fish.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYS-3Y-2ec">
+                                <rect key="frame" x="172" y="28" width="126" height="146"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="chicken.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Q0-ZH-pRH">
+                                <rect key="frame" x="36" y="202" width="119" height="113"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="pig.png"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="beefButton" destination="jly-h5-10w" id="Ces-l3-yUS"/>
+                        <outlet property="chickenButton" destination="UYS-3Y-2ec" id="x5O-Pm-rvF"/>
+                        <outlet property="pigButton" destination="1Q0-ZH-pRH" id="lhP-cv-FqA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fEU-YL-VCR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="829" y="804"/>
+            <point key="canvasLocation" x="828.75" y="803.87323943661977"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="KvX-D4-Ftz">
@@ -171,4 +193,9 @@
             <point key="canvasLocation" x="2211" y="804"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chicken.png" width="245" height="276"/>
+        <image name="fish.png" width="400" height="314"/>
+        <image name="pig.png" width="257" height="236"/>
+    </resources>
 </document>

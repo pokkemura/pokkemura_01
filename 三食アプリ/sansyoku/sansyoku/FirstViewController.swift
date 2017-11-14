@@ -10,8 +10,23 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+   //ボタン用変数
+    @IBOutlet weak var beefButton: UIButton!
+    @IBOutlet weak var chickenButton: UIButton!
+    @IBOutlet weak var pigButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    //ボタンに関数を関係付ける
+        beefButton.addTarget(self, action: #selector(self.onClick(_:)), for:
+            .touchUpInside)
+        chickenButton.addTarget(self, action: #selector(self.onClick(_:)), for:
+            .touchUpInside)
+        pigButton.addTarget(self, action: #selector(self.onClick(_:)), for:
+            .touchUpInside)
+
 
         // Do any additional setup after loading the view.
     }
@@ -21,7 +36,14 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
+    //ボタンクリックイベント
+    func onClick(_ sender: Any) {
+        //該当するボタンがクリックされたら、そのボタンのon/offが切り替わる
+        let button = sender as! UIButton
+        button.isSelected = !button.isSelected
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -31,5 +53,6 @@ class FirstViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
 
 }
