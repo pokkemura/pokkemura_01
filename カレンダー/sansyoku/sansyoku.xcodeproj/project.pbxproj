@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		092C2AAF1FBA902A0058427E /* ボタン用イラスト in Resources */ = {isa = PBXBuildFile; fileRef = 092C2AAE1FBA902A0058427E /* ボタン用イラスト */; };
+		0967B56B1FCCFBEB0041EED7 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0967B56A1FCCFBEB0041EED7 /* Calendar.swift */; };
+		0967B56D1FCCFD6D0041EED7 /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0967B56C1FCCFD6D0041EED7 /* CollectionReusableView.swift */; };
 		0969625C1FBD204800AB96A1 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0969625B1FBD204800AB96A1 /* CalendarViewController.swift */; };
 		0969625E1FBD231E00AB96A1 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0969625D1FBD231E00AB96A1 /* DateManager.swift */; };
-		096962601FBD234300AB96A1 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0969625F1FBD234300AB96A1 /* CalendarCell.swift */; };
 		097F5BCE1FB977C900E57B5B /* DesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097F5BCD1FB977C900E57B5B /* DesViewController.swift */; };
 		097F5BCF1FB980FF00E57B5B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CC7E81FA97E0E00F908E6 /* SecondViewController.swift */; };
 		098F2CE91FA167D100B54600 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098F2CE81FA167D100B54600 /* AppDelegate.swift */; };
@@ -24,9 +25,10 @@
 
 /* Begin PBXFileReference section */
 		092C2AAE1FBA902A0058427E /* ボタン用イラスト */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "ボタン用イラスト"; sourceTree = "<group>"; };
+		0967B56A1FCCFBEB0041EED7 /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		0967B56C1FCCFD6D0041EED7 /* CollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
 		0969625B1FBD204800AB96A1 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		0969625D1FBD231E00AB96A1 /* DateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
-		0969625F1FBD234300AB96A1 /* CalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		097F5BCD1FB977C900E57B5B /* DesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesViewController.swift; sourceTree = "<group>"; };
 		098F2CE51FA167D100B54600 /* sansyoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sansyoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		098F2CE81FA167D100B54600 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +58,8 @@
 			children = (
 				0969625B1FBD204800AB96A1 /* CalendarViewController.swift */,
 				0969625D1FBD231E00AB96A1 /* DateManager.swift */,
-				0969625F1FBD234300AB96A1 /* CalendarCell.swift */,
+				0967B56A1FCCFBEB0041EED7 /* Calendar.swift */,
+				0967B56C1FCCFD6D0041EED7 /* CollectionReusableView.swift */,
 			);
 			name = Calendar;
 			sourceTree = "<group>";
@@ -171,10 +174,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				097F5BCF1FB980FF00E57B5B /* SecondViewController.swift in Sources */,
+				0967B56B1FCCFBEB0041EED7 /* Calendar.swift in Sources */,
 				099CC7EB1FA97E0E00F908E6 /* FirstViewController.swift in Sources */,
+				0967B56D1FCCFD6D0041EED7 /* CollectionReusableView.swift in Sources */,
 				099CC7E11FA9515D00F908E6 /* PageViewController.swift in Sources */,
 				097F5BCE1FB977C900E57B5B /* DesViewController.swift in Sources */,
-				096962601FBD234300AB96A1 /* CalendarCell.swift in Sources */,
 				099CC7E71FA95B8600F908E6 /* ThirdViewController.swift in Sources */,
 				0969625E1FBD231E00AB96A1 /* DateManager.swift in Sources */,
 				0969625C1FBD204800AB96A1 /* CalendarViewController.swift in Sources */,
