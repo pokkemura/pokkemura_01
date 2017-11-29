@@ -11,7 +11,7 @@ import UIKit
 class SecondViewController: UIViewController {
     
     //ボタン用変数
-    @IBOutlet weak var eggButton: UIButton!
+    
     @IBOutlet weak var potatoButton: UIButton!
     @IBOutlet weak var mayoButton: UIButton!
     
