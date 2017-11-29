@@ -13,43 +13,58 @@ var selectedDate = NSDate()
 let daysPerWeek: Int = 7
 var numberOfItems: Int!
 
-//月ごとのセルの数を返すメソッド
-func daysAcquisition() -> Int {
-    let rangeOfWeeks = NSCalendar.currentCalendar().rangeOfUnit(NSCalendarUnit.WeekOfMonth, inUnit: NSCalendarUnit.Month, forDate: firstDateOfMonth())
-    let numberOfWeeks = rangeOfWeeks.length //月が持つ週の数
-    numberOfItems = numberOfWeeks * daysPerWeek //週の数×列の数
-    return numberOfItems
-}
-//月の初日を取得
-func firstDateOfMonth() -> NSDate {
-    let components = NSCalendar.currentCalendar().components([.Year, .Month, .Day],
-                                                             fromDate: selectedDate)
-    components.day = 1
-    let firstDateMonth = NSCalendar.currentCalendar().dateFromComponents(components)!
-    return firstDateMonth
-}
-
-// ⑴表記する日にちの取得
-func dateForCellAtIndexPath(numberOfItems: Int) {
-    // ①「月の初日が週の何日目か」を計算する
-    let ordinalityOfFirstDay = NSCalendar.currentCalendar().ordinalityOfUnit(NSCalendarUnit.Day, inUnit: NSCalendarUnit.WeekOfMonth, forDate: firstDateOfMonth())
-    for (var i = 0; i < numberOfItems; i++) {
-        // ②「月の初日」と「indexPath.item番目のセルに表示する日」の差を計算する
-        let dateComponents = NSDateComponents()
-        dateComponents.day = i - (ordinalityOfFirstDay - 1)
-        // ③ 表示する月の初日から②で計算した差を引いた日付を取得
-        let date = NSCalendar.currentCalendar().dateByAddingComponents(dateComponents, toDate: firstDateOfMonth(), options: NSCalendar.Options(rawValue: 0))!
-        // ④配列に追加
-        currentMonthOfDates.append(date)
+class DateManager: NSObject {
+    
+    
+    //月ごとのセルの数を返すメソッド
+    func daysAcquisition() -> Int {
+        
+        let rangeOfWeeks = Calendar.current.range(of: .weekOfMonth, in: .month, for: firstDateOfMonth() as Date)
+        
+        let numberOfWeeks = Int((rangeOfWeeks?.count)!) //月が持つ週の数
+        numberOfItems = numberOfWeeks * daysPerWeek //週の数×列の数
+        return numberOfItems
+    }
+    
+    //月の初日を取得
+    func firstDateOfMonth() -> Date {
+        
+        var components = Calendar.current.dateComponents([.year, .month, .day], from:selectedDate as Date)
+        components.day = 1
+        
+        let firstDateMonth = Calendar.current.date(from: components)!
+        return firstDateMonth
+    }
+    
+    func dateForCellAtIndexPath(numberOfItem: Int) {
+        // ①「月の初日が週の何日目か」を計算する
+        let ordinalityOfFirstDay = Calendar.current.ordinality(of: .day, in: .weekOfMonth, for: firstDateOfMonth())
+        
+        for i in 0 ..< numberOfItems {
+            // ②「月の初日」と「indexPath.item番目のセルに表示する日」の差を計算する
+            var dateComponents = DateComponents()
+            
+            dateComponents.day = i - (ordinalityOfFirstDay! - 1)
+            //dateComponents.day = i
+            // ③ 表示する月の初日から②で計算した差を引いた日付を取得
+            
+            let date = Calendar.current.date(byAdding: dateComponents as DateComponents, to: firstDateOfMonth() as Date)!
+            // ④配列に追加
+            
+            currentMonthOfDates.append(date as NSDate)
+        }
+    }
+    
+    // ⑵表記の変更
+    func conversionDateFormat(indexPath: IndexPath) -> String {
+        
+        dateForCellAtIndexPath(numberOfItem: numberOfItems)
+        
+        let formatter: DateFormatter = DateFormatter()
+        formatter.dateFormat = "d"
+        
+        
+        return formatter.string(from: currentMonthOfDates[indexPath.row] as Date)
     }
 }
-
-// ⑵表記の変更
-func conversionDateFormat(indexPath: NSIndexPath) -> String {
-    dateForCellAtIndexPath(numberOfItems)
-    let formatter: NSDateFormatter = NSDateFormatter()
-    formatter.dateFormat = "d"
-    return formatter.stringFromDate(currentMonthOfDates[indexPath.row])
-}
-
 
