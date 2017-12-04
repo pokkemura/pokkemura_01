@@ -16,7 +16,6 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
     let weekArray = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
     let cellMargin: CGFloat = 2.0
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -80,13 +79,10 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
             print("error")
             return 0
         }
-        
     }
     
-    
     //セクションを返すメソッド
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView
-    {
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "Section", for: indexPath) as! CollectionReusableView
         
         let nowDate = NSDate()
@@ -139,13 +135,10 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
                 cell.textLabel?.text = ""
             }
             
-            
-            
         default:
             print("section error")
             cell.backgroundColor = UIColor.white
         }
-        
         return cell
     }
     
