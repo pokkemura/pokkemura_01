@@ -168,6 +168,11 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
         return cellMargin
     }
 
+    //セルをクリックしたら呼ばれる
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Num : \(indexPath.row) Section:\(indexPath.section)")
+    }
+
     /*
     // MARK: - Navigation
 
