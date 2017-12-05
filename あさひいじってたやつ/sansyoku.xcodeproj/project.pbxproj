@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		096936FA1FC3B5DF0096AD36 /* illustlist in Resources */ = {isa = PBXBuildFile; fileRef = 096936F91FC3B5DF0096AD36 /* illustlist */; };
-		096937001FC3CB070096AD36 /* ForthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096936FF1FC3CB070096AD36 /* ForthViewController.swift */; };
 		097F5BCE1FB977C900E57B5B /* DesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097F5BCD1FB977C900E57B5B /* DesViewController.swift */; };
 		097F5BCF1FB980FF00E57B5B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CC7E81FA97E0E00F908E6 /* SecondViewController.swift */; };
 		098399851FCD050000D601E4 /* first.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 098399841FCD050000D601E4 /* first.jpg */; };
@@ -23,7 +22,6 @@
 
 /* Begin PBXFileReference section */
 		096936F91FC3B5DF0096AD36 /* illustlist */ = {isa = PBXFileReference; lastKnownFileType = folder; path = illustlist; sourceTree = "<group>"; };
-		096936FF1FC3CB070096AD36 /* ForthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForthViewController.swift; sourceTree = "<group>"; };
 		097F5BCD1FB977C900E57B5B /* DesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesViewController.swift; sourceTree = "<group>"; };
 		098399841FCD050000D601E4 /* first.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = first.jpg; sourceTree = "<group>"; };
 		098399861FCD06C400D601E4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,7 +77,6 @@
 				097F5BCD1FB977C900E57B5B /* DesViewController.swift */,
 				098F2CF11FA167D100B54600 /* LaunchScreen.storyboard */,
 				098F2CF41FA167D100B54600 /* Info.plist */,
-				096936FF1FC3CB070096AD36 /* ForthViewController.swift */,
 				098399861FCD06C400D601E4 /* ViewController.swift */,
 			);
 			path = sansyoku;
@@ -166,7 +163,6 @@
 				099CC7E71FA95B8600F908E6 /* ThirdViewController.swift in Sources */,
 				098F2CE91FA167D100B54600 /* AppDelegate.swift in Sources */,
 				098399871FCD06C400D601E4 /* ViewController.swift in Sources */,
-				096937001FC3CB070096AD36 /* ForthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -26,18 +26,13 @@ class PageViewController: UIPageViewController {
     func getThird() -> ThirdViewController{
         return storyboard!.instantiateViewController(withIdentifier: "ThirdViewController") as! ThirdViewController
     }
-    func getFourth() -> ForthViewController{
-        return storyboard!.instantiateViewController(withIdentifier: "ForthViewController") as! ForthViewController
-    }
 
 }
 
 extension PageViewController : UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        if viewController.isKind(of: ForthViewController.self) {
-            return getThird()
-        } else if viewController.isKind(of: ThirdViewController.self) {
+        if viewController.isKind(of: ThirdViewController.self) {
             // 3 -> 2
             return getSecond()
         } else if viewController.isKind(of: SecondViewController.self) {
@@ -56,11 +51,8 @@ extension PageViewController : UIPageViewControllerDataSource {
         } else if viewController.isKind(of: SecondViewController.self) {
             // 2 -> 3
             return getThird()
-        } else if viewController.isKind(of: ThirdViewController.self) {
-            // 3 -> 4
-            return getFourth()
-        }else{
-            // 4 -> end of the road
+        } else {
+            // 3 -> end of the road
             return nil
         }
     }
