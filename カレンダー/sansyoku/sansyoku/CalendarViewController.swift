@@ -164,6 +164,10 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
     //セルをクリックしたら呼ばれる
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Num : \(indexPath.row) Section:\(indexPath.section)")
+        
+        let storyboard: UIStoryboard = self.storyboard!
+        let nextView = storyboard.instantiateViewController(withIdentifier: "dayView")
+        present(nextView, animated: true, completion: nil)
     }
 
     /*
