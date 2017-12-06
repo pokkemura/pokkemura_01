@@ -236,24 +236,6 @@
             </objects>
             <point key="canvasLocation" x="2180.625" y="803.87323943661977"/>
         </scene>
-        <!--Forth View Controller-->
-        <scene sceneID="yur-wy-6ez">
-            <objects>
-                <viewController storyboardIdentifier="ForthViewController" id="xvL-oy-9Sb" customClass="ForthViewController" customModule="sansyoku" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="H26-fq-ZYK"/>
-                        <viewControllerLayoutGuide type="bottom" id="va1-oS-Kjr"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="IRm-b8-dHt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eeV-1B-MQu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2880" y="804"/>
-        </scene>
     </scenes>
     <resources>
         <image name="apple_0.png" width="382" height="399"/>
