@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="sansyoku" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOi-TL-mM5">
+                                <rect key="frame" x="129" y="345" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="はじめる"/>
+                                <connections>
+                                    <segue destination="SAv-UC-aiK" kind="show" id="oEH-em-CfE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbI-Tm-51Q">
+                                <rect key="frame" x="255" y="507" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="?"/>
+                                <connections>
+                                    <segue destination="AYd-j9-q1Q" kind="show" id="LbF-wP-cnj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.625" y="143.66197183098592"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="h6B-gU-xRn">
+            <objects>
+                <viewController id="SAv-UC-aiK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2zB-UD-PYs"/>
+                        <viewControllerLayoutGuide type="bottom" id="iMG-oY-Ann"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SNu-DA-fMb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zc-97-KcE">
+                                <rect key="frame" x="137" y="457" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Klr-ca-jO3">
+                                <rect key="frame" x="129" y="378" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="食品登録"/>
+                                <connections>
+                                    <segue destination="HHC-ak-aHK" kind="show" id="Rtd-c5-iUn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2wa-5t-nsT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1127" y="531"/>
+        </scene>
+        <!--Des View Controller-->
+        <scene sceneID="Qmr-Re-hSm">
+            <objects>
+                <viewController storyboardIdentifier="DesViewController" id="AYd-j9-q1Q" customClass="DesViewController" customModule="sansyoku" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ks0-Rr-9I2"/>
+                        <viewControllerLayoutGuide type="bottom" id="fHK-iT-DXz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rlk-rg-nms">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="三色商品群とは" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lr6-hE-ZF3">
+                                <rect key="frame" x="40" y="133" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="mTextView" destination="lr6-hE-ZF3" id="RMW-ce-s1M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r4W-8O-D52" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="829" y="135"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="Wbv-u7-YZN">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="HHC-ak-aHK" customClass="PageViewController" customModule="sansyoku" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mMW-gl-R9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="913"/>
+        </scene>
+        <!--First View Controller-->
+        <scene sceneID="hVf-mg-MAP">
+            <objects>
+                <viewController storyboardIdentifier="FirstViewController" id="Gbg-cm-QTE" customClass="FirstViewController" customModule="sansyoku" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uje-LZ-jKz"/>
+                        <viewControllerLayoutGuide type="bottom" id="zcS-LG-Cf8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yig-bt-y6d">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jly-h5-10w">
+                                <rect key="frame" x="16" y="62" width="75" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="pig_0.png"/>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYS-3Y-2ec">
+                                <rect key="frame" x="219" y="69" width="82" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="chicken_0.png"/>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Q0-ZH-pRH">
+                                <rect key="frame" x="106" y="102" width="92" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="cow_0.png"/>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hL4-CG-fmr">
+                                <rect key="frame" x="16" y="180" width="86" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="egg_0.png"/>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWe-1u-zdj">
+                                <rect key="frame" x="191" y="186" width="98" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="fish_0.png"/>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7o5-QV-502">
+                                <rect key="frame" x="115" y="241" width="74" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="shrimp_0.png"/>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VlE-LS-cRj">
+                                <rect key="frame" x="41" y="301" width="61" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="octopus_0.png"/>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOD-6T-Jje">
+                                <rect key="frame" x="219" y="292" width="58" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="squid_0.png"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90856736898422241" green="0.51578032970428467" blue="0.46377170085906982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="chickenButton" destination="UYS-3Y-2ec" id="Akq-1H-CHF"/>
+                        <outlet property="cowButton" destination="1Q0-ZH-pRH" id="h4d-9l-xiw"/>
+                        <outlet property="eggButton" destination="hL4-CG-fmr" id="M4Q-yi-Yob"/>
+                        <outlet property="fishButton" destination="nWe-1u-zdj" id="zKm-o5-JXp"/>
+                        <outlet property="octopusButton" destination="VlE-LS-cRj" id="QN6-Jk-j3u"/>
+                        <outlet property="pigButton" destination="jly-h5-10w" id="FWH-nm-uqn"/>
+                        <outlet property="shrimpButton" destination="7o5-QV-502" id="hu4-Yh-LKk"/>
+                        <outlet property="squidButton" destination="IOD-6T-Jje" id="xTw-MN-0mU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fEU-YL-VCR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828.75" y="803.87323943661977"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="KvX-D4-Ftz">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="b0G-OP-kJa" customClass="SecondViewController" customModule="sansyoku" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sVN-bE-XrQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Oq-wN-f09"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bIO-cZ-Ke9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="20" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58H-D9-QSj">
+                                <rect key="frame" x="43" y="56" width="63" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="potato_0.png"/>
+                            </button>
+                            <button opaque="NO" tag="21" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUJ-Mj-KXz">
+                                <rect key="frame" x="114" y="88" width="69" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="mayo_0.png"/>
+                            </button>
+                            <button opaque="NO" tag="22" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LwG-eF-IhB">
+                                <rect key="frame" x="191" y="56" width="60" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="rice_0.png"/>
+                            </button>
+                            <button opaque="NO" tag="23" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3T-Am-8WZ">
+                                <rect key="frame" x="44" y="185" width="62" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="sweet_potato_0.png"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97090597410482693" green="0.9994240403175354" blue="0.60093248583245285" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="mayoButton" destination="IUJ-Mj-KXz" id="uLN-Ym-IOM"/>
+                        <outlet property="potatoButton" destination="58H-D9-QSj" id="jB8-cE-qfM"/>
+                        <outlet property="riceButton" destination="LwG-eF-IhB" id="Nw6-MB-7QK"/>
+                        <outlet property="sweet_potatoButton" destination="D3T-Am-8WZ" id="8zT-KU-XAz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JOG-mr-yxx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1516.875" y="803.87323943661977"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="3al-X6-oYF">
+            <objects>
+                <viewController storyboardIdentifier="ThirdViewController" id="9fB-8M-z90" customClass="ThirdViewController" customModule="sansyoku" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pau-Oi-o1b"/>
+                        <viewControllerLayoutGuide type="bottom" id="DUA-Qs-5tZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2so-LL-plE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="40" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSa-OX-vbl">
+                                <rect key="frame" x="51" y="52" width="54" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="apple_0.png"/>
+                            </button>
+                            <button opaque="NO" tag="41" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKd-zL-6jO">
+                                <rect key="frame" x="126" y="128" width="63" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="broccoli_0.png"/>
+                            </button>
+                            <button opaque="NO" tag="42" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1v-db-tbJ">
+                                <rect key="frame" x="216" y="54" width="58" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="carrot_0.png"/>
+                            </button>
+                            <button opaque="NO" tag="43" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUc-N0-16q">
+                                <rect key="frame" x="37" y="178" width="68" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="banana_0.png"/>
+                            </button>
+                            <button opaque="NO" tag="44" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUZ-bK-Fxk">
+                                <rect key="frame" x="126" y="236" width="57" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="jap_radish_0.png"/>
+                            </button>
+                            <button opaque="NO" tag="45" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQq-s2-pSa">
+                                <rect key="frame" x="216" y="164" width="61" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="leek_0.png"/>
+                            </button>
+                            <button opaque="NO" tag="48" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtA-yG-Kmn">
+                                <rect key="frame" x="222" y="276" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="onion_0.png"/>
+                            </button>
+                            <button opaque="NO" tag="46" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akN-tH-f6g">
+                                <rect key="frame" x="37" y="305" width="62" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="orange_0.png"/>
+                            </button>
+                            <button opaque="NO" tag="47" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jY1-M9-Teg">
+                                <rect key="frame" x="145" y="349" width="65" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="tomato_0.png"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.65055385377402075" green="0.97680455446243286" blue="0.64128392624962294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="appleButton" destination="eSa-OX-vbl" id="MYs-ia-hM3"/>
+                        <outlet property="bananaButton" destination="jUc-N0-16q" id="WYE-9Z-D8O"/>
+                        <outlet property="broccoliButton" destination="iKd-zL-6jO" id="eYf-mb-68T"/>
+                        <outlet property="carrotButton" destination="A1v-db-tbJ" id="48u-xu-dzk"/>
+                        <outlet property="jap_radishButton" destination="bUZ-bK-Fxk" id="wXA-Ex-cYD"/>
+                        <outlet property="leekButton" destination="OQq-s2-pSa" id="1bY-2g-rc0"/>
+                        <outlet property="onionButton" destination="BtA-yG-Kmn" id="rq6-qH-d2Z"/>
+                        <outlet property="orangeButton" destination="akN-tH-f6g" id="Lsq-XQ-fbA"/>
+                        <outlet property="tomatoButton" destination="jY1-M9-Teg" id="wKU-T2-HTO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LiX-Ta-PBi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2180.625" y="803.87323943661977"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="apple_0.png" width="382" height="399"/>
+        <image name="banana_0.png" width="400" height="400"/>
+        <image name="broccoli_0.png" width="180" height="180"/>
+        <image name="carrot_0.png" width="328" height="400"/>
+        <image name="chicken_0.png" width="245" height="276"/>
+        <image name="cow_0.png" width="400" height="399"/>
+        <image name="egg_0.png" width="400" height="375"/>
+        <image name="fish_0.png" width="400" height="314"/>
+        <image name="jap_radish_0.png" width="359" height="400"/>
+        <image name="leek_0.png" width="336" height="349"/>
+        <image name="mayo_0.png" width="284" height="400"/>
+        <image name="octopus_0.png" width="180" height="180"/>
+        <image name="onion_0.png" width="382" height="399"/>
+        <image name="orange_0.png" width="400" height="398"/>
+        <image name="pig_0.png" width="257" height="236"/>
+        <image name="potato_0.png" width="400" height="400"/>
+        <image name="rice_0.png" width="400" height="400"/>
+        <image name="shrimp_0.png" width="379" height="400"/>
+        <image name="squid_0.png" width="198" height="400"/>
+        <image name="sweet_potato_0.png" width="285" height="268"/>
+        <image name="tomato_0.png" width="400" height="400"/>
+    </resources>
+</document>
