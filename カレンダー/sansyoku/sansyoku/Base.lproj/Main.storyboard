@@ -210,6 +210,13 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t3F-yJ-lIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationBar contentMode="scaleToFill" id="N13-9x-R1b">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <items>
+                        <navigationItem title="Title" id="tED-AD-xat"/>
+                    </items>
+                </navigationBar>
             </objects>
             <point key="canvasLocation" x="1916" y="869"/>
         </scene>
