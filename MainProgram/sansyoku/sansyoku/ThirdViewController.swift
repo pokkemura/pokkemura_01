@@ -1,5 +1,5 @@
 //
-//  ThirdViewController.swift
+//  SecondViewController.swift
 //  sansyoku
 //
 //  Created by tsit.st2 on 2017/12/07.
@@ -11,44 +11,24 @@ import UIKit
 class ThirdViewController: UIViewController {
     
     //ボタン用変数
-    @IBOutlet weak var appleButton: UIButton!
-    @IBOutlet weak var broccoliButton: UIButton!
-    @IBOutlet weak var carrotButton: UIButton!
-    @IBOutlet weak var bananaButton: UIButton!
-    @IBOutlet weak var jap_radishButton: UIButton!
-    @IBOutlet weak var leekButton: UIButton!
-    @IBOutlet weak var orangeButton: UIButton!
-    @IBOutlet weak var tomatoButton: UIButton!
-    @IBOutlet weak var onionButton: UIButton!
     
+    @IBOutlet weak var potatoButton: UIButton!
+    @IBOutlet weak var mayoButton: UIButton!
+    @IBOutlet weak var riceButton: UIButton!
+    @IBOutlet weak var sweet_potatoButton: UIButton!
     
     //画像の準備
-    let Image0:UIImage = UIImage(named:"illustlist/apple_0")!
-    let Image1:UIImage = UIImage(named:"illustlist/apple_1")!
+    let Image0:UIImage = UIImage(named:"illustlist/potato_0")!
+    let Image1:UIImage = UIImage(named:"illustlist/potato_1")!
     
-    let Image2:UIImage = UIImage(named:"illustlist/broccoli_0")!
-    let Image3:UIImage = UIImage(named:"illustlist/broccoli_1")!
+    let Image2:UIImage = UIImage(named:"illustlist/mayo_0")!
+    let Image3:UIImage = UIImage(named:"illustlist/mayo_1")!
     
-    let Image4:UIImage = UIImage(named:"illustlist/carrot_0")!
-    let Image5:UIImage = UIImage(named:"illustlist/carrot_1")!
+    let Image4:UIImage = UIImage(named:"illustlist/rice_0")!
+    let Image5:UIImage = UIImage(named:"illustlist/rice_1")!
     
-    let Image6:UIImage = UIImage(named:"illustlist/banana_0")!
-    let Image7:UIImage = UIImage(named:"illustlist/banana_1")!
-    
-    let Image8:UIImage = UIImage(named:"illustlist/jap_radish_0")!
-    let Image9:UIImage = UIImage(named:"illustlist/jap_radish_1")!
-    
-    let Image10:UIImage = UIImage(named:"illustlist/leek_0")!
-    let Image11:UIImage = UIImage(named:"illustlist/leek_1")!
-    
-    let Image12:UIImage = UIImage(named:"illustlist/orange_0")!
-    let Image13:UIImage = UIImage(named:"illustlist/orange_1")!
-    
-    let Image14:UIImage = UIImage(named:"illustlist/tomato_0")!
-    let Image15:UIImage = UIImage(named:"illustlist/tomato_1")!
-    
-    let Image16:UIImage = UIImage(named:"illustlist/onion_0")!
-    let Image17:UIImage = UIImage(named:"illustlist/onion_1")!
+    let Image6:UIImage = UIImage(named:"illustlist/sweet_potato_0")!
+    let Image7:UIImage = UIImage(named:"illustlist/sweet_potato_1")!
     
     //AppDelegateのuserDefaultsを使用するために必要
     let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -58,79 +38,44 @@ class ThirdViewController: UIViewController {
         
         
         //ボタンに関数を関係付ける
-        appleButton.addTarget(self, action: #selector(self.onClick(_:)), for:
+        potatoButton.addTarget(self, action: #selector(self.onClick(_:)), for:
             .touchUpInside)
-        broccoliButton.addTarget(self, action: #selector(self.onClick(_:)), for:
+        mayoButton.addTarget(self, action: #selector(self.onClick(_:)), for:
             .touchUpInside)
-        carrotButton.addTarget(self, action: #selector(self.onClick(_:)), for:
+        riceButton.addTarget(self, action: #selector(self.onClick(_:)), for:
             .touchUpInside)
-        bananaButton.addTarget(self, action: #selector(self.onClick(_:)), for:
-            .touchUpInside)
-        jap_radishButton.addTarget(self, action: #selector(self.onClick(_:)), for:
-            .touchUpInside)
-        leekButton.addTarget(self, action: #selector(self.onClick(_:)), for:
-            .touchUpInside)
-        orangeButton.addTarget(self, action: #selector(self.onClick(_:)), for:
-            .touchUpInside)
-        tomatoButton.addTarget(self, action: #selector(self.onClick(_:)), for:
-            .touchUpInside)
-        onionButton.addTarget(self, action: #selector(self.onClick(_:)), for:
+        sweet_potatoButton.addTarget(self, action: #selector(self.onClick(_:)), for:
             .touchUpInside)
         
         //各ボタン、状態別に画像を指定
         
-        appleButton.setImage(Image0, for: UIControlState.normal)
-        appleButton.setImage(Image1, for: UIControlState.selected)
+        potatoButton.setImage(Image0, for: UIControlState.normal)
+        potatoButton.setImage(Image1, for: UIControlState.selected)
         
-        broccoliButton.setImage(Image2, for: UIControlState.normal)
-        broccoliButton.setImage(Image3, for: UIControlState.selected)
+        mayoButton.setImage(Image2, for: UIControlState.normal)
+        mayoButton.setImage(Image3, for: UIControlState.selected)
         
-        carrotButton.setImage(Image4, for: UIControlState.normal)
-        carrotButton.setImage(Image5, for: UIControlState.selected)
+        riceButton.setImage(Image4, for: UIControlState.normal)
+        riceButton.setImage(Image5, for: UIControlState.selected)
         
-        bananaButton.setImage(Image6, for: UIControlState.normal)
-        bananaButton.setImage(Image7, for: UIControlState.selected)
-        
-        jap_radishButton.setImage(Image8, for: UIControlState.normal)
-        jap_radishButton.setImage(Image9, for: UIControlState.selected)
-        
-        leekButton.setImage(Image10, for: UIControlState.normal)
-        leekButton.setImage(Image11, for: UIControlState.selected)
-        
-        orangeButton.setImage(Image12, for: UIControlState.normal)
-        orangeButton.setImage(Image13, for: UIControlState.selected)
-        
-        tomatoButton.setImage(Image14, for: UIControlState.normal)
-        tomatoButton.setImage(Image15, for: UIControlState.selected)
-        
-        onionButton.setImage(Image16, for: UIControlState.normal)
-        onionButton.setImage(Image17, for: UIControlState.selected)
+        sweet_potatoButton.setImage(Image6, for: UIControlState.normal)
+        sweet_potatoButton.setImage(Image7, for: UIControlState.selected)
         
         //UserDefaultsの設定
-        if (appDelegate.userDefaults.object(forKey: "appleButton") == nil){
+        if (appDelegate.userDefaults.object(forKey: "potatoButton") == nil){
             
-            appDelegate.userDefaults.set(false, forKey: "appleButton")
-            appDelegate.userDefaults.set(false, forKey: "broccoliButton")
-            appDelegate.userDefaults.set(false, forKey: "carrotButton")
-            appDelegate.userDefaults.set(false, forKey: "bananaButton")
-            appDelegate.userDefaults.set(false, forKey: "jap_radishButton")
-            appDelegate.userDefaults.set(false, forKey: "leekButton")
-            appDelegate.userDefaults.set(false, forKey: "orangeButton")
-            appDelegate.userDefaults.set(false, forKey: "tomatoButton")
-            appDelegate.userDefaults.set(false, forKey: "onionButton")
+            appDelegate.userDefaults.set(false, forKey: "potatoButton")
+            appDelegate.userDefaults.set(false, forKey: "mayoButton")
+            appDelegate.userDefaults.set(false, forKey: "riceButton")
+            appDelegate.userDefaults.set(false, forKey: "sweet_potatoButton")
             
         } else {
-            print(appDelegate.userDefaults.bool(forKey: "appleButton"))
+            print(appDelegate.userDefaults.bool(forKey: "potatoButton"))
             
-            appleButton.isSelected = appDelegate.userDefaults.bool(forKey: "appleButton")
-            broccoliButton.isSelected = appDelegate.userDefaults.bool(forKey: "broccoliButton")
-            carrotButton.isSelected = appDelegate.userDefaults.bool(forKey: "carrotButton")
-            bananaButton.isSelected = appDelegate.userDefaults.bool(forKey: "bananaButton")
-            jap_radishButton.isSelected = appDelegate.userDefaults.bool(forKey: "jap_radishButton")
-            leekButton.isSelected = appDelegate.userDefaults.bool(forKey: "leekButton")
-            orangeButton.isSelected = appDelegate.userDefaults.bool(forKey: "orangeButton")
-            tomatoButton.isSelected = appDelegate.userDefaults.bool(forKey: "tomatoButton")
-            onionButton.isSelected = appDelegate.userDefaults.bool(forKey: "onionButton")
+            potatoButton.isSelected = appDelegate.userDefaults.bool(forKey: "potatoButton")
+            mayoButton.isSelected = appDelegate.userDefaults.bool(forKey: "mayoButton")
+            riceButton.isSelected = appDelegate.userDefaults.bool(forKey: "riceButton")
+            sweet_potatoButton.isSelected = appDelegate.userDefaults.bool(forKey: "sweet_potatoButton")
         }
     }
     
@@ -147,24 +92,14 @@ class ThirdViewController: UIViewController {
         //UserDefaultsにデータを保存：ID順注意！
         switch button.tag {
         case 40:
-            appDelegate.userDefaults.set(button.isSelected, forKey: "appleButton")
+            appDelegate.userDefaults.set(button.isSelected, forKey: "potatoButton")
         case 41:
-            appDelegate.userDefaults.set(button.isSelected, forKey: "broccoliButton")
+            appDelegate.userDefaults.set(button.isSelected, forKey: "mayoButton")
         case 42:
             appDelegate.userDefaults.set(button.isSelected, forKey:
-                "carrotButton")
+                "riceButton")
         case 43:
-            appDelegate.userDefaults.set(button.isSelected, forKey: "bananaButton")
-        case 44:
-            appDelegate.userDefaults.set(button.isSelected, forKey: "jap_radishButton")
-        case 45:
-            appDelegate.userDefaults.set(button.isSelected, forKey: "leekButton")
-        case 46:
-            appDelegate.userDefaults.set(button.isSelected, forKey: "orangeButton")
-        case 47:
-            appDelegate.userDefaults.set(button.isSelected, forKey: "tomatoButton")
-        case 48:
-            appDelegate.userDefaults.set(button.isSelected, forKey: "onionButton")
+            appDelegate.userDefaults.set(button.isSelected, forKey: "sweet_potatoButton")
             
         default:
             break
