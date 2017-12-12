@@ -56,6 +56,12 @@ class SecondViewController: UIViewController {
     //AppDelegateのuserDefaultsを使用するために必要
     let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
+    //結果
+    @IBAction func secondResultButton(_ sender: Any) {
+        print(appDelegate.globalRed)
+        print(appDelegate.globalGreen)
+        print(appDelegate.globalYellow)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -152,30 +158,88 @@ class SecondViewController: UIViewController {
         case 20:
             appDelegate.userDefaults.set(button.isSelected, forKey: "appleButton")
             if (button.isSelected == true){
-                appDelegate.globalGreen += 1
-            } else {
+                appDelegate.globalGreen += 1            } else {
                 if (appDelegate.globalGreen > 0) {
                     appDelegate.globalGreen -= 1
                 }
             }
         case 21:
             appDelegate.userDefaults.set(button.isSelected, forKey: "broccoliButton")
+            if (button.isSelected == true){
+                appDelegate.globalGreen += 1
+            } else {
+                if (appDelegate.globalGreen > 0) {
+                    appDelegate.globalGreen -= 1
+                }
+            }
         case 22:
             appDelegate.userDefaults.set(button.isSelected, forKey:
                 "carrotButton")
+            if (button.isSelected == true){
+                appDelegate.globalGreen += 1
+            } else {
+                if (appDelegate.globalGreen > 0) {
+                    appDelegate.globalGreen -= 1
+                }
+            }
         case 23:
             appDelegate.userDefaults.set(button.isSelected, forKey: "bananaButton")
+            if (button.isSelected == true){
+                appDelegate.globalGreen += 1
+            } else {
+                if (appDelegate.globalGreen > 0) {
+                    appDelegate.globalGreen -= 1
+                }
+            }
         case 24:
             appDelegate.userDefaults.set(button.isSelected, forKey: "jap_radishButton")
+            if (button.isSelected == true){
+                appDelegate.globalGreen += 1
+
+            } else {
+                if (appDelegate.globalGreen > 0) {
+                    appDelegate.globalGreen -= 1
+                }
+            }
         case 25:
             appDelegate.userDefaults.set(button.isSelected, forKey: "leekButton")
+            if (button.isSelected == true){
+                appDelegate.globalGreen += 1
+
+            } else {
+                if (appDelegate.globalGreen > 0) {
+                    appDelegate.globalGreen -= 1
+                }
+            }
         case 26:
             appDelegate.userDefaults.set(button.isSelected, forKey: "orangeButton")
+            if (button.isSelected == true){
+                appDelegate.globalGreen += 1
+
+            } else {
+                if (appDelegate.globalGreen > 0) {
+                    appDelegate.globalGreen -= 1
+                }
+            }
         case 27:
             appDelegate.userDefaults.set(button.isSelected, forKey: "tomatoButton")
+            if (button.isSelected == true){
+                appDelegate.globalGreen += 1
+            } else {
+                if (appDelegate.globalGreen > 0) {
+                    appDelegate.globalGreen -= 1
+                }
+            }
         case 28:
             appDelegate.userDefaults.set(button.isSelected, forKey: "onionButton")
-            
+            if (button.isSelected == true){
+                appDelegate.globalGreen += 1
+
+            } else {
+                if (appDelegate.globalGreen > 0) {
+                    appDelegate.globalGreen -= 1
+                }
+            }
         default:
             break
         }

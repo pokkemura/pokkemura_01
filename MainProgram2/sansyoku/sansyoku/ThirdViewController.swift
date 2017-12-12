@@ -11,14 +11,10 @@ import UIKit
 class ThirdViewController: UIViewController {
     
     //ボタン用変数
-    
     @IBOutlet weak var potatoButton: UIButton!
     @IBOutlet weak var mayoButton: UIButton!
     @IBOutlet weak var riceButton: UIButton!
     @IBOutlet weak var sweet_potatoButton: UIButton!
-    
-    //共通変数
-    var grobalYellow = 0
     
     //画像の準備
     let Image0:UIImage = UIImage(named:"illustlist/potato_0")!
@@ -36,9 +32,14 @@ class ThirdViewController: UIViewController {
     //AppDelegateのuserDefaultsを使用するために必要
     let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
+    //結果
+    @IBAction func thirdResultButton(_ sender: Any) {
+        print(appDelegate.globalRed)
+        print(appDelegate.globalGreen)
+        print(appDelegate.globalYellow)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         //ボタンに関数を関係付ける
         potatoButton.addTarget(self, action: #selector(self.onClick(_:)), for:
@@ -51,7 +52,6 @@ class ThirdViewController: UIViewController {
             .touchUpInside)
         
         //各ボタン、状態別に画像を指定
-        
         potatoButton.setImage(Image0, for: UIControlState.normal)
         potatoButton.setImage(Image1, for: UIControlState.selected)
         
@@ -105,12 +105,32 @@ class ThirdViewController: UIViewController {
             }
         case 41:
             appDelegate.userDefaults.set(button.isSelected, forKey: "mayoButton")
+            if (button.isSelected == true){
+                appDelegate.globalYellow += 1
+            } else {
+                if (appDelegate.globalYellow > 0) {
+                    appDelegate.globalYellow -= 1
+                }
+            }
         case 42:
             appDelegate.userDefaults.set(button.isSelected, forKey:
                 "riceButton")
+            if (button.isSelected == true){
+                appDelegate.globalYellow += 1
+            } else {
+                if (appDelegate.globalYellow > 0) {
+                    appDelegate.globalYellow -= 1
+                }
+            }
         case 43:
             appDelegate.userDefaults.set(button.isSelected, forKey: "sweet_potatoButton")
-            
+            if (button.isSelected == true){
+                appDelegate.globalYellow += 1
+            } else {
+                if (appDelegate.globalYellow > 0) {
+                    appDelegate.globalYellow -= 1
+                }
+            }
         default:
             break
         }

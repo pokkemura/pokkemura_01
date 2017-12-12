@@ -14,17 +14,12 @@ class TourokuViewController: UIViewController {
     @IBOutlet weak var greenBar: UIProgressView!
     @IBOutlet weak var yellowBar: UIProgressView!
     
+    //AppDelegateのuserDefaultsを使用するために必要
+    let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //Barの太さ変更
-        redBar.transform = CGAffineTransform(scaleX: 1.0, y: 4.0)
-        greenBar.transform = CGAffineTransform(scaleX: 1.0, y: 4.0)
-        yellowBar.transform = CGAffineTransform(scaleX: 1.0, y: 4.0)
-        
-        
-        
-
+        hoge()
         // Do any additional setup after loading the view.
     }
 
@@ -33,6 +28,29 @@ class TourokuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func unwind(_ segue:UIStoryboardSegue){
+        loadView()
+        hoge()
+    }
+    
+    func hoge() {
+        //Barの太さ変更
+        redBar.transform = CGAffineTransform(scaleX: 1.0, y: 6.0)
+        greenBar.transform = CGAffineTransform(scaleX: 1.0, y: 6.0)
+        yellowBar.transform = CGAffineTransform(scaleX: 1.0, y: 6.0)
+        
+        let red:Double = Double(appDelegate.globalRed)
+        let i:Double = red * 1.7
+        redBar.progress = Float(i) / 10
+        
+        let green:Double = Double(appDelegate.globalGreen)
+        let j:Double = green * 3.4
+        greenBar.progress = Float(j) / 10
+        
+        let yellow:Double = Double(appDelegate.globalYellow)
+        let k:Double = yellow * 1.4
+        yellowBar.progress = Float(k) / 10
+    }
 
     /*
     // MARK: - Navigation

@@ -20,9 +20,6 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var octopusButton: UIButton!
     @IBOutlet weak var squidButton: UIButton!
     
-    //共通変数
-    var grobalRed = 0
-    
     //画像の準備
     let Image0:UIImage = UIImage(named:"illustlist/pig_0")!
     let Image1:UIImage = UIImage(named:"illustlist/pig_1")!
@@ -48,11 +45,13 @@ class FirstViewController: UIViewController {
     let Image14:UIImage = UIImage(named:"illustlist/squid_0")!
     let Image15:UIImage = UIImage(named:"illustlist/squid_1")!
     
-    @IBAction func resultButton(_ sender: Any) {
+    //結果
+    @IBAction func firstResultButton(_ sender: Any) {
         print(appDelegate.globalRed)
         print(appDelegate.globalGreen)
         print(appDelegate.globalYellow)
     }
+
     //AppDelegateのuserDefaultsを使用するために必要
     let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -152,19 +151,68 @@ class FirstViewController: UIViewController {
             }
         case 1:
             appDelegate.userDefaults.set(button.isSelected, forKey: "cowButton")
+            if (button.isSelected == true){
+                appDelegate.globalRed += 1
+            } else {
+                if (appDelegate.globalRed > 0) {
+                    appDelegate.globalRed -= 1
+                }
+            }
         case 2:
             appDelegate.userDefaults.set(button.isSelected, forKey:
                 "chickenButton")
+            if (button.isSelected == true){
+                appDelegate.globalRed += 1
+            } else {
+                if (appDelegate.globalRed > 0) {
+                    appDelegate.globalRed -= 1
+                }
+            }
         case 3:
             appDelegate.userDefaults.set(button.isSelected, forKey: "eggButton")
+            if (button.isSelected == true){
+                appDelegate.globalRed += 1
+            } else {
+                if (appDelegate.globalRed > 0) {
+                    appDelegate.globalRed -= 1
+                }
+            }
         case 4:
             appDelegate.userDefaults.set(button.isSelected, forKey: "shrimpButton")
+            if (button.isSelected == true){
+                appDelegate.globalRed += 1
+            } else {
+                if (appDelegate.globalRed > 0) {
+                    appDelegate.globalRed -= 1
+                }
+            }
         case 5:
             appDelegate.userDefaults.set(button.isSelected, forKey: "fishButton")
+            if (button.isSelected == true){
+                appDelegate.globalRed += 1
+            } else {
+                if (appDelegate.globalRed > 0) {
+                    appDelegate.globalRed -= 1
+                }
+            }
         case 6:
             appDelegate.userDefaults.set(button.isSelected, forKey: "octopusButton")
+            if (button.isSelected == true){
+                appDelegate.globalRed += 1
+            } else {
+                if (appDelegate.globalRed > 0) {
+                    appDelegate.globalRed -= 1
+                }
+            }
         case 7:
             appDelegate.userDefaults.set(button.isSelected, forKey: "squidButton")
+            if (button.isSelected == true){
+                appDelegate.globalRed += 1
+            } else {
+                if (appDelegate.globalRed > 0) {
+                    appDelegate.globalRed -= 1
+                }
+            }
         default:
             break
         }

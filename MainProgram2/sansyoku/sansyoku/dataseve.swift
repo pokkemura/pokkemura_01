@@ -12,6 +12,4 @@ class Sevedate:NSObject {
     var globalRed = 0
     var globalGreen = 0
     var globalYellow = 0
-    
-    
 }
