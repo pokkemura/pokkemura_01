@@ -23,6 +23,7 @@
 		09BD22591FD8D971005489C3 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BD22581FD8D971005489C3 /* PageViewController.swift */; };
 		09BD225B1FD8DAA0005489C3 /* illustlist in Resources */ = {isa = PBXBuildFile; fileRef = 09BD225A1FD8DAA0005489C3 /* illustlist */; };
 		09E6E5461FDF6C0D00A53E13 /* dataseve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E6E5451FDF6C0D00A53E13 /* dataseve.swift */; };
+		09EC493C1FE0B75B002789EF /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EC493B1FE0B75B002789EF /* DayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		09BD22581FD8D971005489C3 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		09BD225A1FD8DAA0005489C3 /* illustlist */ = {isa = PBXFileReference; lastKnownFileType = folder; path = illustlist; sourceTree = "<group>"; };
 		09E6E5451FDF6C0D00A53E13 /* dataseve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dataseve.swift; sourceTree = "<group>"; };
+		09EC493B1FE0B75B002789EF /* DayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				095452A01FD79B25006DC251 /* DateManager.swift */,
 				095452A21FD79B55006DC251 /* Calendar.swift */,
 				095452A41FD79B72006DC251 /* CollectionReusableView.swift */,
+				09EC493B1FE0B75B002789EF /* DayViewController.swift */,
 			);
 			name = Calendar;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				09BD22551FD8D949005489C3 /* ThirdViewController.swift in Sources */,
 				09E6E5461FDF6C0D00A53E13 /* dataseve.swift in Sources */,
 				09BD22531FD8D93C005489C3 /* FirstViewController.swift in Sources */,
+				09EC493C1FE0B75B002789EF /* DayViewController.swift in Sources */,
 				095452A51FD79B72006DC251 /* CollectionReusableView.swift in Sources */,
 				0954528C1FD77A07006DC251 /* AppDelegate.swift in Sources */,
 				09BD22501FD8D2E5005489C3 /* TourokuViewController.swift in Sources */,
