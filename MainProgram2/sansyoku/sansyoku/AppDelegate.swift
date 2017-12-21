@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var globalRed = 0
     var globalGreen = 0
     var globalYellow = 0
+    
+    var csvData:Array<String> = ["6,3.0,7.0,20171220","2.0,2.0,2.0,20171221"]
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

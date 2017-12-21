@@ -9,13 +9,104 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "sansyoku/ViewController.swift"
-            timestampString = "534827353.548522"
+            filePath = "sansyoku/ChartViewController.swift"
+            timestampString = "535268429.350275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "fileSearch()"
+            startingLineNumber = "2"
+            endingLineNumber = "2">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "sansyoku.ChartViewController.__deallocating_deinit"
+                  moduleName = "sansyoku"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tsit.st2/Desktop/pokkemura_01/pokkemura_01/MainProgram2/sansyoku/sansyoku/ChartViewController.swift"
+                  timestampString = "535268429.647975"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "sansyoku.ChartViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; sansyoku.ChartViewController"
+                  moduleName = "sansyoku"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tsit.st2/Desktop/pokkemura_01/pokkemura_01/MainProgram2/sansyoku/sansyoku/ChartViewController.swift"
+                  timestampString = "535268429.651887"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "sansyoku.ChartViewController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; sansyoku.ChartViewController"
+                  moduleName = "sansyoku"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tsit.st2/Desktop/pokkemura_01/pokkemura_01/MainProgram2/sansyoku/sansyoku/ChartViewController.swift"
+                  timestampString = "535268429.654959"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "sansyoku.ChartViewController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;sansyoku.ChartViewController&gt;"
+                  moduleName = "sansyoku"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tsit.st2/Desktop/pokkemura_01/pokkemura_01/MainProgram2/sansyoku/sansyoku/ChartViewController.swift"
+                  timestampString = "535268429.657839"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "sansyoku.ChartViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;sansyoku.ChartViewController&gt;"
+                  moduleName = "sansyoku"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tsit.st2/Desktop/pokkemura_01/pokkemura_01/MainProgram2/sansyoku/sansyoku/ChartViewController.swift"
+                  timestampString = "535268429.660298"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "sansyoku/ChartViewController.swift"
+            timestampString = "535518720.535163"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

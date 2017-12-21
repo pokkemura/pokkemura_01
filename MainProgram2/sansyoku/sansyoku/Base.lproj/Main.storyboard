@@ -59,10 +59,10 @@
             </objects>
             <point key="canvasLocation" x="1538" y="153"/>
         </scene>
-        <!--View Controller-->
+        <!--Chart View Controller-->
         <scene sceneID="K3b-aQ-zRf">
             <objects>
-                <viewController storyboardIdentifier="dayView" id="tng-ZM-kBO" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="dayView" id="tng-ZM-kBO" customClass="ChartViewController" customModule="sansyoku" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IQL-L6-gsD"/>
                         <viewControllerLayoutGuide type="bottom" id="lHh-3T-1ba"/>
@@ -84,9 +84,17 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fyT-oJ-nU5" customClass="DayViewController" customModule="sansyoku" customModuleProvider="target">
+                                <rect key="frame" x="40" y="220" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="dayViewController" destination="fyT-oJ-nU5" id="ovN-3N-ZIg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YPM-G1-Lts" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -438,6 +446,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aI6-c4-jho" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="476" y="155"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="in4-Oh-o9N">
+            <objects>
+                <viewController id="WHa-5U-wKr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wwr-3q-UAd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3150" y="618"/>
         </scene>
     </scenes>
     <resources>

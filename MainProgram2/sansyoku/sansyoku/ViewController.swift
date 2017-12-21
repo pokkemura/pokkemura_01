@@ -24,7 +24,7 @@ class ViewController: UIViewController {
 
     func fileEditor() {
         //作成するファイルの名前
-        let csvFileName = "datasave.csb"
+        let csvFileName = "datasave.csv"
         let filedata:String = ""
         
         //DocmentディレクトリのfileURLを取得
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
     }
     
     func fileSearch() {
-        let csvFileName = "datasave.csb"
+        let csvFileName = "datasave.csv"
         
         //DocmentディレクトリのfileURLを取得
         if let documentDirectoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last {
