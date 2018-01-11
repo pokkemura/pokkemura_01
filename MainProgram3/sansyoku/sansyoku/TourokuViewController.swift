@@ -63,7 +63,7 @@ class TourokuViewController: UIViewController {
         let csvFileName = "datasave.csv"
         //今日の日付
         let dayArray = appDelegate.toDay
-        let text = ""
+        //let text = ""
         
         //ドキュメントフォルダのURL取得
         if let csvPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last {
@@ -84,9 +84,13 @@ class TourokuViewController: UIViewController {
                         break
                     }
                 }*/
+                
                 //改行区切りで部活配列を連結する。
                 let outputStr = csvArr.joined(separator: "\n")
+                //ファイルに書き込み
                 try outputStr.write(to: csvPath, atomically: false, encoding: String.Encoding.utf8)
+                //書き込む内容を用意
+                
                 appDelegate.csvdata = csvArr
             } catch let error as NSError {
                 print(error.localizedDescription)
