@@ -8,6 +8,7 @@
 
 import UIKit
 
+//日付を表示する
 class CustomUICollectionViewCell : UICollectionViewCell{
     
     var textLabel : UILabel?

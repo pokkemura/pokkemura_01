@@ -8,7 +8,7 @@
 
 import UIKit
 
-var test:[[String]] = []
+var mainArray:[[String]] = []
 class ChartViewController: UIViewController{
     
     // @IBOutlet weak var dayViewController: UIViewController!
@@ -16,28 +16,43 @@ class ChartViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         hoge()
         
-        var i:Double = Double(test[0][0])!
-        var j:Double = Double(test[0][1])!
-        var k:Double = Double(test[0][2])!
+        var i:Double = 0
+        var j:Double = 0
+        var k:Double = 0
         
-        print(i)
-        print(j)
-        print(k)
+        var todays = String(appDelegate.toDays)
+        var selectDays = String(appDelegate.selectDay)
+        var result = 0
+        for day in 0..<32{
+            if (mainArray[day][3].hasSuffix(selectDays)) {
+                result = day
+                i = Double(mainArray[result][0])!
+                j = Double(mainArray[result][1])!
+                k = Double(mainArray[result][2])!
+                break
+            } else {
+                print("中身なし")
+                break
+            }
+        }
+        
         i = i * 20
         j = j * 40 + i
         k = k * 17.15 + j
+        /* デバッグ
         print(i)
         print(j)
         print(k)
-        
+        */
         var segments = [Segment]()
         segments.append(Segment(color: .red, angle: CGFloat(i)))
         segments.append(Segment(color: .green, angle: CGFloat(j)))
         segments.append(Segment(color: .yellow, angle: CGFloat(k)))
-        //        segments.append(Segment(color: .magenta, angle: 320.0))
-        //        segments.append(Segment(color: .blue, angle: 345.0))
+        
         if (k <= 360) {
             segments.append(Segment(color: .gray, angle: 360.0))
         } else {
@@ -48,16 +63,15 @@ class ChartViewController: UIViewController{
     }
     
     func hoge() {
-        
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         
         //  var test:[[String]] = []
         var rowArray = appDelegate.csvdata
         rowArray.forEach{
             let items = $0.components(separatedBy: ",")
-            test.append(items)
+            mainArray.append(items)
         }
-        print(test)
+        print(mainArray)
         print("count=" ,rowArray.count)
     }
     

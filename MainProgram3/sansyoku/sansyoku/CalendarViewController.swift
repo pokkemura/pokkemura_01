@@ -165,7 +165,9 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
-        print("Num : \(indexPath.row) Section:\(indexPath.section)")
+        print("Num : \(indexPath.row) Section:\(indexPath.section)")//セル番号
+        appDelegate.selectDay = indexPath.row //appderegateの変数に選択した日付を入力
+        print(appDelegate.selectDay) //デバッグ
         print("date : \(dateManager.currentMonthOfDates[indexPath.row + 1])")
         
         let storyboard: UIStoryboard = self.storyboard!

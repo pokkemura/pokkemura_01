@@ -16,7 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //let touroku = TourokuViewController()
     
     //日付
-    var toDay = ""
+    var toDay = 0
+    var toDays = 0
+    var selectDay = 0
     
     //データ受け渡し用
     let userDefaults = UserDefaults.standard
@@ -25,8 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //var globalRed = 0
     //var globalGreen = 0
     //var globalYellow = 0
-    
-    var csvData:Array<String> = ["2,2,2,20171220"]
     
     var csvdata:Array<String> = []
 

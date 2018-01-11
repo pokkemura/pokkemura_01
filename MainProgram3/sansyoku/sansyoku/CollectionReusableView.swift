@@ -8,6 +8,7 @@
 
 import UIKit
 
+//日付を表示しない
 class CollectionReusableView: UICollectionReusableView {
     
     var textLabel : UILabel?

@@ -31,6 +31,7 @@ class TourokuViewController: UIViewController {
     @IBAction func unwind(_ segue:UIStoryboardSegue){
         loadView()
         setBar()
+        updatecsv()
     }
     
     func setBar() {
@@ -57,9 +58,12 @@ class TourokuViewController: UIViewController {
         
     }
     
-    func csvToArray() {
+    func updatecsv() {
         //ファイルの名前
         let csvFileName = "datasave.csv"
+        //今日の日付
+        let dayArray = appDelegate.toDay
+        let text = ""
         
         //ドキュメントフォルダのURL取得
         if let csvPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last {
@@ -70,8 +74,19 @@ class TourokuViewController: UIViewController {
             //ファイルの読み込み
             do {
                 let csvStr = try String(contentsOfFile:csvFilePath, encoding:String.Encoding.utf8)
-                let csvArr = csvStr.components(separatedBy: .newlines)
-                print(csvArr)
+                var csvArr = csvStr.components(separatedBy: .newlines)
+                print(csvArr) //ファイルから読み込んだ配列の中身
+                appDelegate.csvdata = csvArr
+                csvArr.removeLast()
+                /*for day in 0..<32{
+                    if ([day][3].hasSuffix(today)) {
+                        result = day
+                        break
+                    }
+                }*/
+                //改行区切りで部活配列を連結する。
+                let outputStr = csvArr.joined(separator: "\n")
+                try outputStr.write(to: csvPath, atomically: false, encoding: String.Encoding.utf8)
                 appDelegate.csvdata = csvArr
             } catch let error as NSError {
                 print(error.localizedDescription)

@@ -26,7 +26,7 @@ class ViewController: UIViewController {
 
     func fileEditor() {
         //作成するファイルの名前
-        let csvFileName = "datasave.csb"
+        let csvFileName = "datasave.csv"
         let filedata:String = ""
         
         //DocmentディレクトリのfileURLを取得
@@ -46,8 +46,9 @@ class ViewController: UIViewController {
         }
     }
     
+    //csvfileがあるかの検索
     func fileSearch() {
-        let csvFileName = "datasave.csb"
+        let csvFileName = "datasave.csv"
         
         //DocmentディレクトリのfileURLを取得
         if let documentDirectoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last {
@@ -91,6 +92,8 @@ class ViewController: UIViewController {
     }
     
     func getDay() {
+        
+        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         //現在時刻を取得.
         let myDate: Date = Date()
         
@@ -108,6 +111,9 @@ class ViewController: UIViewController {
                 NSCalendar.Unit.second,
                 NSCalendar.Unit.weekday
             ],from: myDate)
+        
+        appDelegate.toDay = myComponetns.day!
     }
+    
 }
 
