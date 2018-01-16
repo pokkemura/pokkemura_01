@@ -16,9 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //let touroku = TourokuViewController()
     
     //日付
-    var toDay = 0
+    var date:String = ""
+    var toDay:String = ""
     var toDays = 0
     var selectDay = 0
+    
+    //配列カウント
+    var countArray = 0
     
     //データ受け渡し用
     let userDefaults = UserDefaults.standard

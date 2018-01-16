@@ -8,7 +8,7 @@
 
 import UIKit
 
-var mainArray:[[String]] = []
+//var mainArray:[[String]] = []
 class ChartViewController: UIViewController{
     
     // @IBOutlet weak var dayViewController: UIViewController!
@@ -18,13 +18,15 @@ class ChartViewController: UIViewController{
         super.viewDidLoad()
         
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
-        hoge()
+        
+        let datasave = DataSave()
+        datasave.arrayCreate()
         
         var i:Double = 0
         var j:Double = 0
         var k:Double = 0
         
-        var todays = String(appDelegate.toDays)
+        var todays = String(appDelegate.toDay)
         var selectDays = String(appDelegate.selectDay)
         var result = 0
         for day in 0..<32{
@@ -60,19 +62,6 @@ class ChartViewController: UIViewController{
         }
         
         self.dayViewController.segments = segments
-    }
-    
-    func hoge() {
-        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
-        
-        //  var test:[[String]] = []
-        var rowArray = appDelegate.csvdata
-        rowArray.forEach{
-            let items = $0.components(separatedBy: ",")
-            mainArray.append(items)
-        }
-        print(mainArray)
-        print("count=" ,rowArray.count)
     }
     
     override func didReceiveMemoryWarning() {

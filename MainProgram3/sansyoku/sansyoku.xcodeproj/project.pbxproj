@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0925A9181FEB76C900678BDE /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0925A9171FEB76C900678BDE /* ChartViewController.swift */; };
 		0925A91A1FEB770000678BDE /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0925A9191FEB770000678BDE /* DayViewController.swift */; };
+		093077C4200D8A040089CF51 /* DataSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093077C3200D8A040089CF51 /* DataSave.swift */; };
 		0954528C1FD77A07006DC251 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0954528B1FD77A07006DC251 /* AppDelegate.swift */; };
 		0954528E1FD77A07006DC251 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0954528D1FD77A07006DC251 /* ViewController.swift */; };
 		095452911FD77A08006DC251 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0954528F1FD77A08006DC251 /* Main.storyboard */; };
@@ -24,12 +25,12 @@
 		09BD22571FD8D95E005489C3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BD22561FD8D95E005489C3 /* SecondViewController.swift */; };
 		09BD22591FD8D971005489C3 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BD22581FD8D971005489C3 /* PageViewController.swift */; };
 		09BD225B1FD8DAA0005489C3 /* illustlist in Resources */ = {isa = PBXBuildFile; fileRef = 09BD225A1FD8DAA0005489C3 /* illustlist */; };
-		09E6E5461FDF6C0D00A53E13 /* dataseve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E6E5451FDF6C0D00A53E13 /* dataseve.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0925A9171FEB76C900678BDE /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		0925A9191FEB770000678BDE /* DayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
+		093077C3200D8A040089CF51 /* DataSave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSave.swift; sourceTree = "<group>"; };
 		095452881FD77A07006DC251 /* sansyoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sansyoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0954528B1FD77A07006DC251 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0954528D1FD77A07006DC251 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,7 +48,6 @@
 		09BD22561FD8D95E005489C3 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		09BD22581FD8D971005489C3 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		09BD225A1FD8DAA0005489C3 /* illustlist */ = {isa = PBXFileReference; lastKnownFileType = folder; path = illustlist; sourceTree = "<group>"; };
-		09E6E5451FDF6C0D00A53E13 /* dataseve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dataseve.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +90,7 @@
 				095452921FD77A08006DC251 /* Assets.xcassets */,
 				095452941FD77A08006DC251 /* LaunchScreen.storyboard */,
 				095452971FD77A08006DC251 /* Info.plist */,
+				093077C3200D8A040089CF51 /* DataSave.swift */,
 			);
 			path = sansyoku;
 			sourceTree = "<group>";
@@ -114,7 +115,6 @@
 				09BD22541FD8D949005489C3 /* ThirdViewController.swift */,
 				09BD22561FD8D95E005489C3 /* SecondViewController.swift */,
 				09BD22581FD8D971005489C3 /* PageViewController.swift */,
-				09E6E5451FDF6C0D00A53E13 /* dataseve.swift */,
 			);
 			name = Ragistration;
 			sourceTree = "<group>";
@@ -201,9 +201,9 @@
 				0925A91A1FEB770000678BDE /* DayViewController.swift in Sources */,
 				0954528E1FD77A07006DC251 /* ViewController.swift in Sources */,
 				09BD22551FD8D949005489C3 /* ThirdViewController.swift in Sources */,
-				09E6E5461FDF6C0D00A53E13 /* dataseve.swift in Sources */,
 				09BD22531FD8D93C005489C3 /* FirstViewController.swift in Sources */,
 				095452A51FD79B72006DC251 /* CollectionReusableView.swift in Sources */,
+				093077C4200D8A040089CF51 /* DataSave.swift in Sources */,
 				0954528C1FD77A07006DC251 /* AppDelegate.swift in Sources */,
 				09BD22501FD8D2E5005489C3 /* TourokuViewController.swift in Sources */,
 				095452A31FD79B55006DC251 /* Calendar.swift in Sources */,

@@ -9,13 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    //データ保存ファイルのインスタンス
+    let datasave = DataSave()
+    
+    //appderegateのインスタンス
+    let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         fileSearch()
         csvToArray()
-        getDay()
+        datasave.getDay()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -69,7 +75,6 @@ class ViewController: UIViewController {
     
     func csvToArray() {
         
-        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         //ファイルの名前
         let csvFileName = "datasave.csv"
         
@@ -90,30 +95,5 @@ class ViewController: UIViewController {
             }
         }
     }
-    
-    func getDay() {
-        
-        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
-        //現在時刻を取得.
-        let myDate: Date = Date()
-        
-        //カレンダーを取得.
-        let myCalendar: NSCalendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)!
-        
-        //取得するコンポーネントを決める.
-        let myComponetns = myCalendar.components(
-            [
-                NSCalendar.Unit.year,
-                NSCalendar.Unit.month,
-                NSCalendar.Unit.day,
-                NSCalendar.Unit.hour,
-                NSCalendar.Unit.minute,
-                NSCalendar.Unit.second,
-                NSCalendar.Unit.weekday
-            ],from: myDate)
-        
-        appDelegate.toDay = myComponetns.day!
-    }
-    
 }
 
