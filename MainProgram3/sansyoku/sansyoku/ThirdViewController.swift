@@ -10,6 +10,8 @@ import UIKit
 
 class ThirdViewController: UIViewController {
     
+    let datasave = DataSave()
+    
     //ボタン用変数
     @IBOutlet weak var potatoButton: UIButton!
     @IBOutlet weak var mayoButton: UIButton!
@@ -37,6 +39,7 @@ class ThirdViewController: UIViewController {
         print(appDelegate.userDefaults.integer(forKey: "red"))
         print(appDelegate.userDefaults.integer(forKey: "green"))
         print(appDelegate.userDefaults.integer(forKey: "yellow"))
+        datasave.updatecsv()
     }
     override func viewDidLoad() {
         super.viewDidLoad()

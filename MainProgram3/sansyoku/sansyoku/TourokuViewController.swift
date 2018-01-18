@@ -32,10 +32,8 @@ class TourokuViewController: UIViewController {
     }
     
     @IBAction func unwind(_ segue:UIStoryboardSegue){
-        
         loadView()
         setBar()
-        datasave.updatecsv()
     }
     
     func setBar() {

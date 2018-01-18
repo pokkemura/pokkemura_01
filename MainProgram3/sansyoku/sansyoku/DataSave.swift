@@ -8,19 +8,36 @@
 
 import UIKit
 
-var mainArray:[[String]] = []
-
 class DataSave: NSObject {
     let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     func arrayCreate() {
         
-        var rowArray = appDelegate.csvdata
+        var rowArray:Array<String> = []
+        //ファイルの名前
+        let csvFileName = "datasave.csv"
+        //ドキュメントフォルダのURL取得
+        if let csvPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last {
+            
+            //ファイルのフルパス作成
+            let csvFilePath = csvPath.appendingPathComponent(csvFileName).path
+            
+            //ファイルの読み込み
+            do {
+                let csvStr = try String(contentsOfFile:csvFilePath, encoding:String.Encoding.utf8)
+                var csvArr = csvStr.components(separatedBy: .newlines)
+                rowArray = csvArr
+                appDelegate.csvdata = csvArr
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        }
+
         rowArray.forEach{
             let items = $0.components(separatedBy: ",")
-            mainArray.append(items)
+            appDelegate.mainArray.append(items)
         }
-        print(mainArray)
+        print(appDelegate.mainArray)
         print("count=" ,rowArray.count)
         appDelegate.countArray = rowArray.count
     }
@@ -43,11 +60,16 @@ class DataSave: NSObject {
     }
     
     func updatecsv() {
+        arrayCreate()
+        getDay()
+        
         //ファイルの名前
         let csvFileName = "datasave.csv"
         //今日の日付
-        let day = Int(appDelegate.toDay)!
+        let day = appDelegate.toDay
         let dayArray = appDelegate.date
+        //ファイルの最後
+        let count = appDelegate.countArray
         //ファイルに追記する内容
         var redt:String = String(appDelegate.userDefaults.double(forKey: "red"))
         var greent:String = String(appDelegate.userDefaults.double(forKey: "green"))
@@ -68,16 +90,15 @@ class DataSave: NSObject {
                 let csvStr = try String(contentsOfFile:csvFilePath, encoding:String.Encoding.utf8)
                 var csvArr = csvStr.components(separatedBy: .newlines)
                 print(csvArr) //ファイルから読み込んだ配列の中身
+                print(count)
                 appDelegate.csvdata = csvArr //appderegateに配列一時保存
-                
-                
-                csvArr.removeLast()
-                
-                //改行区切りで部活配列を連結する。
-                let outputStr = csvArr.joined(separator: "\n")
-                //ファイルに書き込み
-                try text.write(to: csvPath, atomically: false, encoding: String.Encoding.utf8)
-                appDelegate.csvdata = csvArr
+                let csv = csvArr[count - 1]
+                if (csv.hasSuffix(day)) {
+                    csvArr.removeLast()
+                }
+                csvArr.append(text)
+                let str = csvArr.joined(separator: "\n")
+                try str.write(toFile: csvFilePath, atomically: true, encoding: String.Encoding.utf8)
             } catch let error as NSError {
                 print(error.localizedDescription)
             }

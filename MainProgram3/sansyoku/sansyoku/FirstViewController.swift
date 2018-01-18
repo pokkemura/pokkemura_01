@@ -10,6 +10,11 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
+    //AppDelegateのuserDefaultsを使用するために必要
+    let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    let datasave = DataSave()
+    
     //ボタン用変数
     @IBOutlet weak var pigButton: UIButton!
     @IBOutlet weak var chickenButton: UIButton!
@@ -50,10 +55,8 @@ class FirstViewController: UIViewController {
         print(appDelegate.userDefaults.integer(forKey: "red"))
         print(appDelegate.userDefaults.integer(forKey: "green"))
         print(appDelegate.userDefaults.integer(forKey: "yellow"))
+        datasave.updatecsv()
     }
-
-    //AppDelegateのuserDefaultsを使用するために必要
-    let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
