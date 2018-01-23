@@ -58,5 +58,4 @@ class DayViewController: UIView {
             startAngle = endAngle
         }
     }
-    
 }
