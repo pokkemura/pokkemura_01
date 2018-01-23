@@ -10,6 +10,8 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
+    let datasave = DataSave()
+    
     //ボタン用変数
     @IBOutlet weak var appleButton: UIButton!
     @IBOutlet weak var broccoliButton: UIButton!
@@ -61,10 +63,11 @@ class SecondViewController: UIViewController {
         print(appDelegate.userDefaults.integer(forKey: "red"))
         print(appDelegate.userDefaults.integer(forKey: "green"))
         print(appDelegate.userDefaults.integer(forKey: "yellow"))
+        datasave.updatecsv()
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         //ボタンに関数を関係付ける
         appleButton.addTarget(self, action: #selector(self.onClick(_:)), for:

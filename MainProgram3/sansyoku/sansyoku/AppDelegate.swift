@@ -15,6 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     //let touroku = TourokuViewController()
     
+    //csv配列
+    var mainArray:[[String]] = []
+    
     //日付
     var date:String = ""
     var toDay:String = ""

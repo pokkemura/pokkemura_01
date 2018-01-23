@@ -8,10 +8,8 @@
 
 import UIKit
 
-//var mainArray:[[String]] = []
 class ChartViewController: UIViewController{
     
-    // @IBOutlet weak var dayViewController: UIViewController!
     @IBOutlet weak var dayViewController: DayViewController!
     @IBOutlet weak var ti: UILabel!
     @IBOutlet weak var tj: UILabel!
@@ -26,19 +24,20 @@ class ChartViewController: UIViewController{
         let datasave = DataSave()
         datasave.arrayCreate()
         
+        //グラフ用変数
         var i:Double = 0
         var j:Double = 0
         var k:Double = 0
         
-        var todays = String(appDelegate.toDay)
+        //var todays = String(appDelegate.toDay)
         var selectDays = String(appDelegate.selectDay)
-        var result = 0
+        //日付をforで回して選んだ日を特定
         for day in 0..<32{
-            if (mainArray[day][3].hasSuffix(selectDays)) {
-                result = day
-                i = Double(mainArray[result][0])!
-                j = Double(mainArray[result][1])!
-                k = Double(mainArray[result][2])!
+            //配列の日付が選んだ日と合致する場合変数に代入
+            if (appDelegate.mainArray[day][3].hasSuffix(selectDays)) {
+                i = Double(appDelegate.mainArray[day][0])!
+                j = Double(appDelegate.mainArray[day][1])!
+                k = Double(appDelegate.mainArray[day][2])!
                 break
             } else {
                 print("中身なし")
@@ -46,6 +45,7 @@ class ChartViewController: UIViewController{
             }
         }
         
+<<<<<<< HEAD
         i = i * 18
         j = j * 18 + i
         k = k * 18 + j
@@ -57,11 +57,20 @@ class ChartViewController: UIViewController{
         
         
         
+=======
+        //グラフ設定用計算
+        i = i * 20
+        j = j * 40 + i
+        k = k * 17.15 + j
+
+        //グラフを設定
+>>>>>>> 05b6c43885ca6def3d1b0cdeb975163d2ce4876d
         var segments = [Segment]()
         segments.append(Segment(color: .red, angle: CGFloat(i)))
         segments.append(Segment(color: .green, angle: CGFloat(j)))
         segments.append(Segment(color: .yellow, angle: CGFloat(k)))
         
+        //グラフが360度を超える場合切り捨て　360度以下の場合グレーゾーンを表示
         if (k <= 360) {
             segments.append(Segment(color: .gray, angle: 360.0))
         } else {
