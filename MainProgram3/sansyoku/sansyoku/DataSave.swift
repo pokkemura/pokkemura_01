@@ -11,6 +11,11 @@ import UIKit
 class DataSave: NSObject {
     let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
+    //csv配列
+    var mainArray:[[String]] = []
+    
+    var selectDay = 0
+    
     func arrayCreate() {
         
         var rowArray:Array<String> = []
@@ -27,7 +32,7 @@ class DataSave: NSObject {
                 let csvStr = try String(contentsOfFile:csvFilePath, encoding:String.Encoding.utf8)
                 var csvArr = csvStr.components(separatedBy: .newlines)
                 rowArray = csvArr
-                appDelegate.csvdata = csvArr
+                appDelegate.csvdata = rowArray
             } catch let error as NSError {
                 print(error.localizedDescription)
             }
@@ -35,9 +40,9 @@ class DataSave: NSObject {
 
         rowArray.forEach{
             let items = $0.components(separatedBy: ",")
-            appDelegate.mainArray.append(items)
+            mainArray.append(items)
         }
-        print(appDelegate.mainArray)
+        print(mainArray)
         print("count=" ,rowArray.count)
         appDelegate.countArray = rowArray.count
     }
@@ -48,7 +53,7 @@ class DataSave: NSObject {
         //現在時刻を取得.
         
         let fullDate = DateFormatter()
-        fullDate.dateFormat = "yyyy-MM-dd"
+        fullDate.dateFormat = "yyyyMMdd"
         let day = DateFormatter()
         day.dateFormat = "dd"
         let now = Date()
@@ -63,12 +68,13 @@ class DataSave: NSObject {
         arrayCreate()
         getDay()
         
+        var csvArr = appDelegate.csvdata
         //ファイルの名前
         let csvFileName = "datasave.csv"
         //今日の日付
         let day = appDelegate.toDay
         let dayArray = appDelegate.date
-        //ファイルの最後
+        //ファイルの最後の番号
         let count = appDelegate.countArray
         //ファイルに追記する内容
         var redt:String = String(appDelegate.userDefaults.double(forKey: "red"))
@@ -87,11 +93,8 @@ class DataSave: NSObject {
             
             //ファイルの読み込み
             do {
-                let csvStr = try String(contentsOfFile:csvFilePath, encoding:String.Encoding.utf8)
-                var csvArr = csvStr.components(separatedBy: .newlines)
                 print(csvArr) //ファイルから読み込んだ配列の中身
                 print(count)
-                appDelegate.csvdata = csvArr //appderegateに配列一時保存
                 let csv = csvArr[count - 1]
                 if (csv.hasSuffix(day)) {
                     csvArr.removeLast()
@@ -99,6 +102,79 @@ class DataSave: NSObject {
                 csvArr.append(text)
                 let str = csvArr.joined(separator: "\n")
                 try str.write(toFile: csvFilePath, atomically: true, encoding: String.Encoding.utf8)
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    //初回起動時ファイル作成
+    func fileEditor() {
+        
+        getDay()
+        let dayArray = appDelegate.date
+        let text:String = "0.0,0.0,0.0,"
+        let formatFile:String = text + dayArray
+        
+        //作成するファイルの名前
+        let csvFileName = "datasave.csv"
+        let filedata:String = formatFile
+        
+        //DocmentディレクトリのfileURLを取得
+        if let documentDirectoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last {
+            
+            //ディレクトリのパスにファイル名を繋げてフルパス作成
+            let csvFilePath = documentDirectoryFileURL.appendingPathComponent(csvFileName)
+            
+            print("書き込むファイルのパス：\(csvFilePath)")
+            
+            //書き込み
+            do {
+                try filedata.write(to: csvFilePath, atomically: true, encoding: String.Encoding.utf8)
+            } catch let error as NSError {
+                print("failed to write:\(error)")
+            }
+        }
+    }
+    
+    //csvfileがあるかの検索
+    func fileSearch() {
+        let csvFileName = "datasave.csv"
+        
+        //DocmentディレクトリのfileURLを取得
+        if let documentDirectoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last {
+            
+            //ディレクトリのパスにファイル名を繋げてフルパス作成
+            let csvFilePath = documentDirectoryFileURL.appendingPathComponent(csvFileName).path
+            
+            let checkValidation = FileManager()
+            
+            if (checkValidation.fileExists(atPath: csvFilePath)) {
+                print("ファイルあり")
+            } else {
+                print("ファイルなし")
+                fileEditor()
+            }
+        }
+    }
+    
+    func csvToArray() {
+        
+        //ファイルの名前
+        let csvFileName = "datasave.csv"
+        
+        //ドキュメントフォルダのURL取得
+        if let csvPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last {
+            
+            //ファイルのフルパス作成
+            let csvFilePath = csvPath.appendingPathComponent(csvFileName).path
+            
+            //ファイルの読み込み
+            do {
+                let csvStr = try String(contentsOfFile:csvFilePath, encoding:String.Encoding.utf8)
+                let csvArr = csvStr.components(separatedBy: .newlines)
+                print(csvArr)
+                appDelegate.csvdata = csvArr
             } catch let error as NSError {
                 print(error.localizedDescription)
             }

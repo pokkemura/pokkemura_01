@@ -13,7 +13,7 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
     var myCollectionView : UICollectionView!
     let dateManager = DateManager()
     
-    let weekArray = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+    let weekArray = ["日", "月", "火", "水", "木", "金", "土"]
     let cellMargin: CGFloat = 2.0
     
     override func viewDidLoad() {
@@ -30,7 +30,7 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
         layout.headerReferenceSize = CGSize(width:0,height:10)
         
         // CollectionViewを生成.
-        myCollectionView = UICollectionView(frame: CGRect(x: 0, y: 100, width: self.view.frame.width, height:self.view.frame.height - 110), collectionViewLayout: layout)
+        myCollectionView = UICollectionView(frame: CGRect(x: 0, y: 50, width: self.view.frame.width, height:self.view.frame.height - 110), collectionViewLayout: layout)
         
         // Cellに使われるクラスを登録.
         myCollectionView.register(CustomUICollectionViewCell.self, forCellWithReuseIdentifier: "MyCell")
@@ -166,8 +166,7 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
         
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         print("Num : \(indexPath.row) Section:\(indexPath.section)")//セル番号
-        appDelegate.selectDay = indexPath.row //appderegateの変数に選択した日付を入力
-        print(appDelegate.selectDay) //デバッグ
+        appDelegate.selectDay = indexPath.section //appderegateの変数に選択した日付を入力
         print("date : \(dateManager.currentMonthOfDates[indexPath.row + 1])")
         
         let storyboard: UIStoryboard = self.storyboard!
@@ -175,7 +174,8 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
         present(nextView, animated: true, completion: nil)
     }
     
-    @IBAction func unwind(_ segue:UIStoryboardSegue){}
+    @IBAction func unwind(_ segue:UIStoryboardSegue){
+    }
     
     /*
      // MARK: - Navigation

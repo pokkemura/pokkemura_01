@@ -10,6 +10,7 @@
 		0925A9181FEB76C900678BDE /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0925A9171FEB76C900678BDE /* ChartViewController.swift */; };
 		0925A91A1FEB770000678BDE /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0925A9191FEB770000678BDE /* DayViewController.swift */; };
 		093077C4200D8A040089CF51 /* DataSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093077C3200D8A040089CF51 /* DataSave.swift */; };
+		094E276A20171462001CA7EE /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094E276920171462001CA7EE /* SettingViewController.swift */; };
 		0954528C1FD77A07006DC251 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0954528B1FD77A07006DC251 /* AppDelegate.swift */; };
 		0954528E1FD77A07006DC251 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0954528D1FD77A07006DC251 /* ViewController.swift */; };
 		095452911FD77A08006DC251 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0954528F1FD77A08006DC251 /* Main.storyboard */; };
@@ -25,12 +26,14 @@
 		09BD22571FD8D95E005489C3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BD22561FD8D95E005489C3 /* SecondViewController.swift */; };
 		09BD22591FD8D971005489C3 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BD22581FD8D971005489C3 /* PageViewController.swift */; };
 		09BD225B1FD8DAA0005489C3 /* illustlist in Resources */ = {isa = PBXBuildFile; fileRef = 09BD225A1FD8DAA0005489C3 /* illustlist */; };
+		09E304752021543B00E6FE48 /* PopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E304742021543B00E6FE48 /* PopViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0925A9171FEB76C900678BDE /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		0925A9191FEB770000678BDE /* DayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
 		093077C3200D8A040089CF51 /* DataSave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSave.swift; sourceTree = "<group>"; };
+		094E276920171462001CA7EE /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		095452881FD77A07006DC251 /* sansyoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sansyoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0954528B1FD77A07006DC251 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0954528D1FD77A07006DC251 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +51,7 @@
 		09BD22561FD8D95E005489C3 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		09BD22581FD8D971005489C3 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		09BD225A1FD8DAA0005489C3 /* illustlist */ = {isa = PBXFileReference; lastKnownFileType = folder; path = illustlist; sourceTree = "<group>"; };
+		09E304742021543B00E6FE48 /* PopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				0954528B1FD77A07006DC251 /* AppDelegate.swift */,
 				0954528D1FD77A07006DC251 /* ViewController.swift */,
 				0954528F1FD77A08006DC251 /* Main.storyboard */,
+				09E304742021543B00E6FE48 /* PopViewController.swift */,
+				094E276920171462001CA7EE /* SettingViewController.swift */,
 				09BD224F1FD8D2E5005489C3 /* TourokuViewController.swift */,
 				095452921FD77A08006DC251 /* Assets.xcassets */,
 				095452941FD77A08006DC251 /* LaunchScreen.storyboard */,
@@ -193,9 +199,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09E304752021543B00E6FE48 /* PopViewController.swift in Sources */,
 				0954529F1FD79929006DC251 /* CalendarViewController.swift in Sources */,
 				095452A11FD79B25006DC251 /* DateManager.swift in Sources */,
 				09BD22591FD8D971005489C3 /* PageViewController.swift in Sources */,
+				094E276A20171462001CA7EE /* SettingViewController.swift in Sources */,
 				09BD22571FD8D95E005489C3 /* SecondViewController.swift in Sources */,
 				0925A9181FEB76C900678BDE /* ChartViewController.swift in Sources */,
 				0925A91A1FEB770000678BDE /* DayViewController.swift in Sources */,
@@ -329,10 +337,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7NF82T5QAS;
 				INFOPLIST_FILE = sansyoku/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tsit.st2.sansyoku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -342,10 +352,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7NF82T5QAS;
 				INFOPLIST_FILE = sansyoku/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tsit.st2.sansyoku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

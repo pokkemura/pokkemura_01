@@ -8,15 +8,14 @@
 
 import UIKit
 
+    let datasave = DataSave()
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    //let touroku = TourokuViewController()
-    
-    //csv配列
-    var mainArray:[[String]] = []
+    var tensu = 0
     
     //日付
     var date:String = ""
@@ -29,11 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     //データ受け渡し用
     let userDefaults = UserDefaults.standard
-    
-    //ゲージ設定用
-    //var globalRed = 0
-    //var globalGreen = 0
-    //var globalYellow = 0
     
     var csvdata:Array<String> = []
 
@@ -56,23 +50,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-        //アプリ起動直前に呼ばれる
+
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
         //アプリが開いた時に呼ばれる
-    //    touroku.hoge()
+        datasave.fileSearch()
+        datasave.csvToArray()
+        datasave.getDay()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         //フリックしてアプリを終了した時に呼ばれる
-        
-
     }
-
-    
-
 }
 

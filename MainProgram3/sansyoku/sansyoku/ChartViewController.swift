@@ -8,16 +8,16 @@
 
 import UIKit
 
-//var mainArray:[[String]] = []
 class ChartViewController: UIViewController{
     
-    // @IBOutlet weak var dayViewController: UIViewController!
     @IBOutlet weak var dayViewController: DayViewController!
 
     @IBOutlet weak var ti: UILabel!
     @IBOutlet weak var tj: UILabel!
     @IBOutlet weak var tk: UILabel!
     @IBOutlet weak var tl: UILabel!
+    @IBOutlet weak var setTitle: UILabel!
+    @IBOutlet weak var goukei: UILabel!
     
     
     override func viewDidLoad() {
@@ -27,37 +27,55 @@ class ChartViewController: UIViewController{
         
         let datasave = DataSave()
         datasave.arrayCreate()
+        datasave.getDay()
         
+        datasave.mainArray.append(appDelegate.csvdata)
+        
+        var selectDays = ""
+        if (appDelegate.selectDay < 10) {
+            selectDays = "0" + String(appDelegate.selectDay)
+        } else {
+            selectDays = String(appDelegate.selectDay)
+        }
+
+        
+        print(selectDays)
+
         var i:Double = 0
         var j:Double = 0
         var k:Double = 0
         
-        var todays = String(appDelegate.toDay)
-        var selectDays = String(appDelegate.selectDay)
-        var result = 0
-        for day in 0..<32{
-            if (appDelegate.mainArray[day][3].hasSuffix(selectDays)) {
-                result = day
-                i = Double(appDelegate.mainArray[result][0])!
-                j = Double(appDelegate.mainArray[result][1])!
-                k = Double(appDelegate.mainArray[result][2])!
-                break
-            } else {
-                print("中身なし")
-                break
-            }
+        setTitle.text = "\(selectDays)日の摂取記録"
+
+        for day in 0..<appDelegate.countArray where datasave.mainArray[day][3].hasSuffix(selectDays){
+                if (datasave.mainArray[day][3].isEmpty == false) {
+                    i = Double(datasave.mainArray[day][0])!
+                    j = Double(datasave.mainArray[day][1])!
+                    k = Double(datasave.mainArray[day][2])!
+                    break
+                } else {
+                    print("中身なし")
+                }
         }
         
+        if (i > 6) {
+            i = 6
+        }
+        if (j > 3) {
+            j = 3
+        }
+        if (k > 11) {
+            k = 11 
+        }
+        var si:String = String(Int(i))
+        var sj:String = String(Int(j))
+        var sk:String = String(Int(k))
+        var res = Int(i + j + k)
+        let sl:String = String((appDelegate.tensu - res))
+
         i = i * 18
         j = j * 18 + i
         k = k * 18 + j
-        /* デバッグ
-         print(i)
-         print(j)
-         print(k)
-         */
-        
-        
         
         var segments = [Segment]()
         segments.append(Segment(color: .red, angle: CGFloat(i)))
@@ -69,14 +87,16 @@ class ChartViewController: UIViewController{
         } else {
             k = 360
         }
-        var si:String = String(i / 18)
-        var sj:String = String((j - i) / 18)
-        var sk:String = String((k - j) / 18)
-        var sl:String = String((360 - k) / 18)
-        ti.text = si
-        tj.text = sj
-        tk.text = sk
-        tl.text = "あと"+sl+"点足りません＞＜。"
+        
+        ti.text = "赤の栄養素 \(si) / 6 点"
+        tj.text = "緑の栄養素 \(sj) / 3 点"
+        if (appDelegate.tensu == 25) {
+            tk.text = "黄の栄養素 \(sk) / 16 点"
+        } else {
+            tk.text = "黄の栄養素 \(sk) / 11 点"
+        }
+        tl.text = "あと\(sl)点足りません＞＜。"
+        goukei.text = "合計\(appDelegate.tensu)点"
         
         self.dayViewController.segments = segments
     }

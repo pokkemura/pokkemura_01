@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    
     //データ保存ファイルのインスタンス
     let datasave = DataSave()
     
@@ -19,9 +20,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fileSearch()
-        csvToArray()
-        datasave.getDay()
+        //imageButton.setImage(UIImage(named: "illustlist/title.jpg"), for: .normal)
+        
+        // background image
+        let bg = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height))
+        bg.image = UIImage(named: "illustlist/splash_highlight.png")
+        bg.layer.zPosition = -1
+        self.view.addSubview(bg)
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -29,11 +35,20 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func unwind(_ segue:UIStoryboardSegue){
+    }
 
     func fileEditor() {
+        
+        datasave.getDay()
+        let dayArray = appDelegate.date
+        let text:String = "0.0,0.0,0.0,"
+        let formatFile:String = text + dayArray
+        
         //作成するファイルの名前
         let csvFileName = "datasave.csv"
-        let filedata:String = ""
+        let filedata:String = formatFile
         
         //DocmentディレクトリのfileURLを取得
         if let documentDirectoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last {

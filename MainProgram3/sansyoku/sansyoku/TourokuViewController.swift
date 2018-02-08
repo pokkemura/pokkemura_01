@@ -8,7 +8,8 @@
 
 import UIKit
 
-class TourokuViewController: UIViewController {
+class TourokuViewController: UIViewController, UIPopoverPresentationControllerDelegate {
+    
     //データ保存ファイルのインスタンス
     let datasave = DataSave()
     
@@ -31,16 +32,27 @@ class TourokuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+   /* override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        segue.destination.preferredContentSize = CGSize(width: 200, height: 300)
+        let popView = segue.destination.popoverPresentationController
+        popView!.delegate = self
+    }
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+        return .none
+    }*/
+    
     @IBAction func unwind(_ segue:UIStoryboardSegue){
         loadView()
+        
         setBar()
     }
     
     func setBar() {
         //Barの太さ変更
-        redBar.transform = CGAffineTransform(scaleX: 1.0, y: 6.0)
-        greenBar.transform = CGAffineTransform(scaleX: 1.0, y: 6.0)
-        yellowBar.transform = CGAffineTransform(scaleX: 1.0, y: 6.0)
+        redBar.transform = CGAffineTransform(scaleX: 1.0, y: 9.0)
+        greenBar.transform = CGAffineTransform(scaleX: 1.0, y: 9.0)
+        yellowBar.transform = CGAffineTransform(scaleX: 1.0, y: 9.0)
         
         let red:Double = Double(appDelegate.userDefaults.integer(forKey: "red"))
         let i:Double = red * 1.7
@@ -57,11 +69,8 @@ class TourokuViewController: UIViewController {
         print(appDelegate.userDefaults.integer(forKey: "red"))
         print(appDelegate.userDefaults.integer(forKey: "green"))
         print(appDelegate.userDefaults.integer(forKey: "yellow"))
-        
     }
     
-
-
     /*
     // MARK: - Navigation
 
